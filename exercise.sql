@@ -332,6 +332,4 @@ FROM scott.emp e
     ON e.SAL + ifnull(COMM, 0) BETWEEN s.LOSAL AND s.HISAL
 WHERE s.GRADE = 4;
 
-# 作业
-# 复习 ch14, ch22
-# 预习 ch26, ch28
+
