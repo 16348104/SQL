@@ -1,4 +1,4 @@
-DROP DATABASE scott;
+
 CREATE DATABASE IF NOT EXISTS scott;
 USE scott;
 
@@ -46,3 +46,4 @@ insert  into salgrade(GRADE,LOSAL,HISAL) values (1,700,1200),(2,1201,1400),(3,14
 
 SHOW DATABASES;
 # DROP TABLE table_name;
+# DROP DATABASE scott;
