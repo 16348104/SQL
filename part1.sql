@@ -48,6 +48,10 @@ FROM scott.emp
 WHERE HIREDATE = last_day(HIREDATE);
 
 # 10. 检索出雇佣年限超过 35 年的员工信息
-
+SELECT *
+FROM scott.emp
+WHERE date_add(HIREDATE,INTERVAL 35 YEAR)<curdate();
+SELECT curdate();
+SELECT curtime();
 
 
