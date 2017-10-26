@@ -16,3 +16,26 @@ SELECT
 FROM scott.emp
 WHERE JOB = 'clerk';
 # 3. 检索出奖金多于基本工资的员工信息
+SELECT *
+FROM scott.emp
+WHERE COMM > SAL;
+# 4. 检索出奖金多于基本工资 30% 员工信息
+SELECT *
+FROM scott.emp
+WHERE COMM > SAL * 0.3;
+#  5. 希望看到 10 部门的经理或者 20 部门的职员 clerk 的信息
+SELECT *
+FROM scott.emp
+WHERE (DEPTNO = 10 AND JOB = 'MANAGER') OR (DEPTNO = 20 AND job = 'clerk');
+# 6. 找出 10 部门的经理、20 部门的职员或者既不是经理也不是职员但工资高于 2000 元的员工信息
+SELECT *
+FROM scott.emp
+WHERE ((DEPTNO = 10) AND (job = 'manager')) OR ((DEPTNO = 20) AND (JOB = 'clerk'))
+      OR
+      ((JOB NOT IN ('manager', 'CLERK')) AND (SAL + ifnull(COMM, 0) > 2000));
+
+# 7. 找出获得奖金的员工的工作
+SELECT DISTINCT JOB
+FROM scott.emp
+WHERE COMM > 0;
+
