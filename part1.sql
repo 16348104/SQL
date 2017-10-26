@@ -38,4 +38,16 @@ WHERE ((DEPTNO = 10) AND (job = 'manager')) OR ((DEPTNO = 20) AND (JOB = 'clerk'
 SELECT DISTINCT JOB
 FROM scott.emp
 WHERE COMM > 0;
+# 8. 找出奖金少于 100 或者没有获得奖金的员工的信息
+SELECT *
+FROM scott.emp
+WHERE COMM<100 OR COMM is NULL ;
+# 9. 查找员工雇佣日期是当月的最后一天的员工信息
+SELECT *
+FROM scott.emp
+WHERE HIREDATE = last_day(HIREDATE);
+
+# 10. 检索出雇佣年限超过 35 年的员工信息
+
+
 
