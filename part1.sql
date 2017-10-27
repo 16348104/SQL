@@ -88,6 +88,8 @@ SELECT *
 FROM scott.emp
 ORDER BY HIREDATE DESC ;
 # 19. 返回员工的信息并按工作降序、工资升序排列
-
+SELECT *
+FROM scott.emp
+ORDER BY JOB DESC,(SAL+ifnull(COMM,0))ASC ;
 # 20. 返回员工的姓名、雇佣年份和月份，并按月份和雇佣日期排序
 
