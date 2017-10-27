@@ -71,6 +71,7 @@ FROM scott.emp
 WHERE ENAME REGEXP '[^R]'
 ORDER BY ENAME;
 # 14. 找出员工名字的前3个字符
-
+SELECT substr(ENAME, 1, 3)
+FROM scott.emp;
 # 15. 将名字中 A 改为 a
 
