@@ -96,7 +96,8 @@ SELECT ENAME,year(HIREDATE) AS year,month(HIREDATE) as mon
 FROM scott.emp
 ORDER BY day(HIREDATE);
 # 21. 计算员工的日薪，每月按 30 天
-
+SELECT ENAME,round((SAL+ifnull(COMM,0))/30,3) AS sal
+FROM scott.emp;
 # 22. 找出 2 月份雇佣的员工
 SELECT *
 FROM scott.emp
