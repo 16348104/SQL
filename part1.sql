@@ -61,7 +61,9 @@ WHERE ENAME REGEXP '^[A]|^[B]|^[C]'
 ORDER BY ENAME;
 
 # 12. 找到名字长度为 4 个字符的员工信息
-
+SELECT *
+FROM scott.emp
+WHERE length(ENAME)=4;
 # 13. 名字中不包含 R 字符的员工信息
 SELECT *
 FROM scott.emp
@@ -69,5 +71,6 @@ FROM scott.emp
 WHERE ENAME REGEXP '[^R]'
 ORDER BY ENAME;
 # 14. 找出员工名字的前3个字符
+
 # 15. 将名字中 A 改为 a
 
