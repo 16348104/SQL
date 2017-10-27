@@ -74,4 +74,20 @@ ORDER BY ENAME;
 SELECT substr(ENAME, 1, 3)
 FROM scott.emp;
 # 15. 将名字中 A 改为 a
+SELECT replace(ENAME,'A','a')
+FROM scott.emp;
+# 16. 将员工的雇佣日期拖后 10 年
+SELECT date_add(HIREDATE, INTERVAL 10 YEAR)
+FROM scott.emp;
+# 17. 返回员工的详细信息并按姓名排序
+SELECT *
+FROM scott.emp
+ORDER BY ENAME;
+# 18. 返回员工的信息并按员工的工作年限降序排列
+SELECT *
+FROM scott.emp
+ORDER BY HIREDATE DESC ;
+# 19. 返回员工的信息并按工作降序、工资升序排列
+
+# 20. 返回员工的姓名、雇佣年份和月份，并按月份和雇佣日期排序
 
