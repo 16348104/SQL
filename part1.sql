@@ -92,4 +92,13 @@ SELECT *
 FROM scott.emp
 ORDER BY JOB DESC,(SAL+ifnull(COMM,0))ASC ;
 # 20. 返回员工的姓名、雇佣年份和月份，并按月份和雇佣日期排序
+SELECT ENAME,year(HIREDATE) AS year,month(HIREDATE) as mon
+FROM scott.emp
+ORDER BY day(HIREDATE);
+# 21. 计算员工的日薪，每月按 30 天
 
+# 22. 找出 2 月份雇佣的员工
+SELECT *
+FROM scott.emp
+WHERE month(HIREDATE)=2;
+# 23. 至今为止，员工被雇佣的天数
