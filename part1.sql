@@ -122,3 +122,38 @@ FROM scott.emp
 WHERE ENAME REGEXP '^[A]';
 
 # 25. 计算出员工被雇佣了多少年、多少月、多少日
+SELECT
+  ename,
+  HIREDATE,
+  TIMESTAMPDIFF(
+      YEAR,
+      hiredate,
+      CURDATE()
+  ) AS years,
+  TIMESTAMPDIFF(
+      MONTH,
+      DATE_ADD(
+          hiredate,
+          INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()) YEAR
+      ),
+      CURDATE()
+  ) AS months,
+  TIMESTAMPDIFF(
+      DAY,
+      DATE_ADD(
+          DATE_ADD(
+              hiredate,
+              INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()
+              ) YEAR),
+          INTERVAL TIMESTAMPDIFF(
+              MONTH,
+              DATE_ADD(
+                  hiredate,
+                  INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()) YEAR
+              ),
+              CURDATE()
+          ) MONTH
+      ),
+      CURDATE()
+  ) AS days
+FROM scott.emp;
