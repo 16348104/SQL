@@ -41,7 +41,7 @@ WHERE COMM > 0;
 # 8. 找出奖金少于 100 或者没有获得奖金的员工的信息
 SELECT *
 FROM scott.emp
-WHERE COMM<100 OR COMM is NULL ;
+WHERE COMM < 100 OR COMM IS NULL;
 # 9. 查找员工雇佣日期是当月的最后一天的员工信息
 SELECT *
 FROM scott.emp
@@ -50,7 +50,7 @@ WHERE HIREDATE = last_day(HIREDATE);
 # 10. 检索出雇佣年限超过 35 年的员工信息
 SELECT *
 FROM scott.emp
-WHERE date_add(HIREDATE,INTERVAL 35 YEAR)<curdate();
+WHERE date_add(HIREDATE, INTERVAL 35 YEAR) < curdate();
 SELECT curdate();
 SELECT curtime();
 # 11. 找出姓名以 A、B、S 开始的员工信息
@@ -63,7 +63,7 @@ ORDER BY ENAME;
 # 12. 找到名字长度为 4 个字符的员工信息
 SELECT *
 FROM scott.emp
-WHERE length(ENAME)=4;
+WHERE length(ENAME) = 4;
 # 13. 名字中不包含 R 字符的员工信息
 SELECT *
 FROM scott.emp
@@ -74,7 +74,7 @@ ORDER BY ENAME;
 SELECT substr(ENAME, 1, 3)
 FROM scott.emp;
 # 15. 将名字中 A 改为 a
-SELECT replace(ENAME,'A','a')
+SELECT replace(ENAME, 'A', 'a')
 FROM scott.emp;
 # 16. 将员工的雇佣日期拖后 10 年
 SELECT date_add(HIREDATE, INTERVAL 10 YEAR)
@@ -86,25 +86,36 @@ ORDER BY ENAME;
 # 18. 返回员工的信息并按员工的工作年限降序排列
 SELECT *
 FROM scott.emp
-ORDER BY HIREDATE DESC ;
+ORDER BY HIREDATE DESC;
 # 19. 返回员工的信息并按工作降序、工资升序排列
 SELECT *
 FROM scott.emp
-ORDER BY JOB DESC,(SAL+ifnull(COMM,0))ASC ;
+ORDER BY JOB DESC, (SAL + ifnull(COMM, 0)) ASC;
 # 20. 返回员工的姓名、雇佣年份和月份，并按月份和雇佣日期排序
-SELECT ENAME,year(HIREDATE) AS year,month(HIREDATE) as mon
+SELECT
+  ENAME,
+  year(HIREDATE)  AS year,
+  month(HIREDATE) AS mon
 FROM scott.emp
 ORDER BY day(HIREDATE);
 # 21. 计算员工的日薪，每月按 30 天
-SELECT ENAME,round((SAL+ifnull(COMM,0))/30,3) AS sal
+SELECT
+  ENAME,
+  round((SAL + ifnull(COMM, 0)) / 30, 3) AS sal
 FROM scott.emp;
 # 22. 找出 2 月份雇佣的员工
 SELECT *
 FROM scott.emp
-WHERE month(HIREDATE)=2;
+WHERE month(HIREDATE) = 2;
 # 23. 至今为止，员工被雇佣的天数
-SELECT HIREDATE,now() as now,datediff(now(),HIREDATE)
+SELECT
+  datediff(curdate(), date(HIREDATE)),
+  curdate() as now,
+  HIREDATE
 FROM scott.emp;
+
+# SELECT HIREDATE,date(now()) as now,datediff(date(now()),HIREDATE)
+# FROM scott.emp;
 # 24. 找出姓名中包含 A 的员工信息
 SELECT *
 FROM scott.emp
