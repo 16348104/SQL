@@ -129,32 +129,32 @@ SELECT
       YEAR,
       hiredate,
       CURDATE()
-  ) AS years,
+  ) AS years，
   timestampdiff(MONTH,HIREDATE,)
-#   TIMESTAMPDIFF(
-#       MONTH,
-#       DATE_ADD(
-#           hiredate,
-#           INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()) YEAR
-#       ),
-#       CURDATE()
-#   ) AS months,
-#   TIMESTAMPDIFF(
-#       DAY,
-#       DATE_ADD(
-#           DATE_ADD(
-#               hiredate,
-#               INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()
-#               ) YEAR),
-#           INTERVAL TIMESTAMPDIFF(
-#               MONTH,
-#               DATE_ADD(
-#                   hiredate,
-#                   INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()) YEAR
-#               ),
-#               CURDATE()
-#           ) MONTH
-#       ),
-#       CURDATE()
-#   ) AS days
+  TIMESTAMPDIFF(
+      MONTH,
+      DATE_ADD(
+          hiredate,
+          INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()) YEAR
+      ),
+      CURDATE()
+  ) AS months,
+  TIMESTAMPDIFF(
+      DAY,
+      DATE_ADD(
+          DATE_ADD(
+              hiredate,
+              INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()
+              ) YEAR),
+          INTERVAL TIMESTAMPDIFF(
+              MONTH,
+              DATE_ADD(
+                  hiredate,
+                  INTERVAL TIMESTAMPDIFF(YEAR, hiredate, CURDATE()) YEAR
+              ),
+              CURDATE()
+          ) MONTH
+      ),
+      CURDATE()
+  ) AS days
 FROM scott.emp;
