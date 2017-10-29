@@ -103,3 +103,11 @@ SELECT *
 FROM scott.emp
 WHERE month(HIREDATE)=2;
 # 23. 至今为止，员工被雇佣的天数
+SELECT HIREDATE,now() as now,datediff(now(),HIREDATE)
+FROM scott.emp;
+# 24. 找出姓名中包含 A 的员工信息
+SELECT *
+FROM scott.emp
+WHERE ENAME REGEXP '^[A]';
+
+# 25. 计算出员工被雇佣了多少年、多少月、多少日
