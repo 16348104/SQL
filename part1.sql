@@ -129,8 +129,7 @@ SELECT
       YEAR,
       hiredate,
       CURDATE()
-  ) AS years，
-  timestampdiff(MONTH,HIREDATE,)
+  ) AS years,
   TIMESTAMPDIFF(
       MONTH,
       DATE_ADD(
