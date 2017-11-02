@@ -36,7 +36,8 @@ FROM scott.emp e1
 SELECT
   e1.ENAME AS Ename,
   e2.ENAME AS Mname
-FROM scott.emp e1 JOIN scott.emp e2
+FROM scott.emp e1
+  JOIN scott.emp e2
     ON e1.MGR = e2.EMPNO
 WHERE e1.HIREDATE < e2.HIREDATE;
 
@@ -50,12 +51,14 @@ WHERE emp.DEPTNO = dept.DEPTNO;
 SELECT
   e.ENAME,
   d.DNAME
-FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO;
+FROM scott.emp e
+  JOIN scott.dept d ON e.DEPTNO = d.DEPTNO;
 # 6. 返回从事 clerk 工作的员工姓名和所在部门名称
 SELECT
   e.ENAME,
   d.DNAME
-FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
+FROM scott.emp e
+  JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
 WHERE e.JOB = 'clerk';
 
 # 7. 返回部门号及其本部门的最低工资
@@ -67,7 +70,8 @@ GROUP BY emp.DEPTNO;
 
 # 8. 返回销售部 sales 所有员工的姓名
 SELECT e.ENAME
-FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
+FROM scott.emp e
+  JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
 WHERE d.DNAME = 'SALES';
 
 SELECT emp.ENAME
@@ -79,6 +83,12 @@ WHERE DEPTNO = (
 );
 
 # 9. 返回工资多于平均工资的员工
+SELECT *
+FROM scott.emp
+WHERE sal + ifnull(comm, 0) >
+       (SELECT avg(SAL + ifnull(COMM, 0))
+        FROM scott.emp);
+
 # 10. 返回与 scott 从事相同工作的员工
 # 11. 返回比 30 部门员工平均工资高的员工姓名与工资
 # 12. 返回工资高于30部门所有员工工资水平的员工信息
@@ -112,8 +122,7 @@ SELECT
   emp.ENAME,
   (emp.SAL + ifnull(comm, 0)) * 12 AS 年薪
 FROM scott.emp
-ORDER BY 2 DESC ;
-
+ORDER BY 2 DESC;
 
 # 20. 返回工资处于第 4 级别的员工的姓名
 
