@@ -13,6 +13,13 @@ WHERE emp.DEPTNO = dept.DEPTNO;
 # 左外连接
 
 # 2. 工资多于 scott 的员工信息
+SELECT *
+FROM emp
+WHERE SAL + ifnull(comm, 0) >
+      (SELECT SAL + ifnull(COMM, 0)
+       FROM emp
+       WHERE emp.ENAME = 'scott');
+# 不相关子查询
 
 # 3. 返回员工和所属经理的姓名
 
