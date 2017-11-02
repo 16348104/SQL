@@ -90,6 +90,13 @@ WHERE sal + ifnull(comm, 0) >
         FROM scott.emp);
 
 # 10. 返回与 scott 从事相同工作的员工
+SELECT *
+FROM scott.emp
+WHERE emp.JOB IN
+      (SELECT emp.job
+       FROM scott.emp
+       WHERE ENAME = 'scott');
+
 # 11. 返回比 30 部门员工平均工资高的员工姓名与工资
 # 12. 返回工资高于30部门所有员工工资水平的员工信息
 # 13. 返回部门号、部门名、部门所在位置及其每个部门的员工总数
