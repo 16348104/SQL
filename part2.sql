@@ -23,9 +23,14 @@ WHERE SAL + ifnull(comm, 0) >
 SELECT x.*
 FROM scott.emp x
   JOIN scott.emp y ON x.SAL + ifnull(x.COMM, 0) > y.SAL + ifnull(y.COMM, 0)
-WHERE y.ENAME = 'scott';#自身连接
+WHERE y.ENAME = 'scott'; #自身连接
 
 # 3. 返回员工和所属经理的姓名
+SELECT
+  e1.ENAME,
+  e2.ENAME
+FROM scott.emp e1
+  JOIN scott.emp e2 ON e1.MGR = e2.EMPNO;
 
 # 4. 返回雇员的雇佣日期早于其经理雇佣日期的员工及其经理姓名
 
