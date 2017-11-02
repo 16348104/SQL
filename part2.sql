@@ -35,3 +35,15 @@ FROM scott.emp e1
 # 4. 返回雇员的雇佣日期早于其经理雇佣日期的员工及其经理姓名
 
 # 5. 返回员工姓名及其所在的部门名称
+SELECT
+  emp.ENAME,
+  dept.DNAME
+FROM emp, dept
+WHERE emp.DEPTNO = dept.DEPTNO;
+
+SELECT
+  e.ENAME,
+  d.DNAME
+FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO;
+
+

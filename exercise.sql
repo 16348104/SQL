@@ -191,13 +191,6 @@ SELECT
 FROM scott.emp e
   LEFT JOIN scott.dept d
     ON e.DEPTNO = d.DEPTNO; -- 联合条件
-# WHERE ; -- 行检索
-
-SELECT
-  e.ENAME,
-  d.DNAME
-FROM scott.emp e, scott.dept d
-WHERE e.DEPTNO = d.DEPTNO;
 # 4. 返回雇员的雇佣日期早于其经理雇佣日期的员工及其经理姓名
 SELECT
   e1.ENAME,
@@ -213,6 +206,13 @@ SELECT
 FROM scott.emp e
   LEFT JOIN scott.dept d
     ON e.DEPTNO = d.DEPTNO;
+
+SELECT
+  e.ENAME,
+  d.DNAME
+FROM scott.emp e, scott.dept d
+WHERE e.DEPTNO = d.DEPTNO;
+# WHERE ; -- 行检索
 # 6. 返回从事 clerk 工作的员工姓名和所在部门名称
 SELECT
   e.ENAME,
