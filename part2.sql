@@ -20,6 +20,10 @@ WHERE SAL + ifnull(comm, 0) >
        FROM emp
        WHERE emp.ENAME = 'scott');
 # 不相关子查询
+SELECT x.*
+FROM scott.emp x
+  JOIN scott.emp y ON x.SAL + ifnull(x.COMM, 0) > y.SAL + ifnull(y.COMM, 0)
+WHERE y.ENAME = 'scott';#自身连接
 
 # 3. 返回员工和所属经理的姓名
 
