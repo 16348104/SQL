@@ -108,6 +108,13 @@ WHERE JOB = 'MANAGER'
 GROUP BY DEPTNO;
 
 # 19. 计算出员工的年薪，并且以年薪排序
+SELECT
+  emp.ENAME,
+  (emp.SAL + ifnull(comm, 0)) * 12 AS 年薪
+FROM scott.emp
+ORDER BY 1 DESC ;
+
+
 # 20. 返回工资处于第 4 级别的员工的姓名
 
 
