@@ -59,6 +59,11 @@ FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
 WHERE e.JOB = 'clerk';
 
 # 7. 返回部门号及其本部门的最低工资
+SELECT
+  emp.DEPTNO,
+  min(SAL + ifnull(comm, 0)) AS sal
+FROM scott.emp
+GROUP BY emp.DEPTNO;
 
 # 8. 返回销售部 sales 所有员工的姓名
 SELECT e.ENAME
@@ -82,6 +87,7 @@ WHERE DEPTNO = (
 # 15. 返回雇员表中不在同一部门但是从事相同工作的员工信息
 # 16. 返回员工的详细信息，包括部门名
 # 17. 返回员工工作及其从事此工作的最低工资
+
 # 18. 返回不同部门经理的最低工资
 # 19. 计算出员工的年薪，并且以年薪排序
 # 20. 返回工资处于第 4 级别的员工的姓名
