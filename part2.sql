@@ -112,7 +112,7 @@ SELECT
   emp.ENAME,
   (emp.SAL + ifnull(comm, 0)) * 12 AS 年薪
 FROM scott.emp
-ORDER BY 1 DESC ;
+ORDER BY 2 DESC ;
 
 
 # 20. 返回工资处于第 4 级别的员工的姓名
