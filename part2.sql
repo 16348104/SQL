@@ -103,7 +103,14 @@ FROM scott.emp e1
 WHERE e2.ENAME = 'scott';
 
 # 11. 返回比 30 部门员工平均工资高的员工姓名与工资
+SELECT emp.ENAME,sal + ifnull(comm, 0) AS 工资
+FROM scott.emp
+WHERE sal + ifnull(comm, 0) >
+      (SELECT avg(SAL + ifnull(COMM, 0))
+       FROM scott.emp
+      WHERE emp.DEPTNO=30);
 # 12. 返回工资高于30部门所有员工工资水平的员工信息
+
 # 13. 返回部门号、部门名、部门所在位置及其每个部门的员工总数
 SELECT
   d.*,
