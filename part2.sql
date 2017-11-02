@@ -52,10 +52,27 @@ SELECT
   d.DNAME
 FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO;
 # 6. 返回从事 clerk 工作的员工姓名和所在部门名称
+SELECT
+  e.ENAME,
+  d.DNAME
+FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
+WHERE e.JOB = 'clerk';
 
 # 7. 返回部门号及其本部门的最低工资
 
 # 8. 返回销售部 sales 所有员工的姓名
+SELECT e.ENAME
+FROM scott.emp e JOIN scott.dept d ON e.DEPTNO = d.DEPTNO
+WHERE d.DNAME = 'SALES';
+
+SELECT emp.ENAME
+FROM scott.emp
+WHERE DEPTNO = (
+  SELECT dept.DEPTNO
+  FROM scott.dept
+  WHERE dept.DNAME = 'sales'
+);
+
 # 9. 返回工资多于平均工资的员工
 # 10. 返回与 scott 从事相同工作的员工
 # 11. 返回比 30 部门员工平均工资高的员工姓名与工资
