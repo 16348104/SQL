@@ -3,9 +3,14 @@
 SELECT DISTINCT
   emp.DEPTNO,
   dept.DNAME
-FROM emp,dept
+FROM emp, dept
 WHERE emp.DEPTNO = dept.DEPTNO;
-
+# SELECT DISTINCT
+#   emp.DEPTNO,
+#   dept.DNAME
+# FROM dept
+#   LEFT JOIN emp ON dept.DEPTNO = emp.DEPTNO;
+# 左外连接
 
 # 2. 工资多于 scott 的员工信息
 
