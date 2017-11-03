@@ -136,7 +136,9 @@ FROM scott.emp
   JOIN scott.dept ON emp.DEPTNO = dept.DEPTNO;
 
 # 15. 返回雇员表中不在同一部门但是从事相同工作的员工信息
-SELECT e1.*,e2.*
+SELECT
+  e1.*,
+  e2.*
 FROM scott.emp e1
   JOIN scott.emp e2 ON e1.job = e2.JOB AND e1.DEPTNO <> e2.DEPTNO;
 
@@ -169,5 +171,15 @@ FROM scott.emp
 ORDER BY 2 DESC;
 
 # 20. 返回工资处于第 4 级别的员工的姓名
+
+SELECT
+  e.ENAME,
+  e.SAL + ifnull(e.COMM, 0) 工资,
+  s.LOSAL,
+  s.HISAL
+FROM scott.emp e
+  JOIN scott.salgrade s
+  ON (e.SAL+ifnull(e.COMM,0)) BETWEEN s.LOSAL AND s.HISAL
+WHERE s.GRADE = 4;
 
 
