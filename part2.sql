@@ -88,6 +88,9 @@ FROM scott.emp
 WHERE sal + ifnull(comm, 0) >
       (SELECT avg(SAL + ifnull(COMM, 0))
        FROM scott.emp);
+# SELECT e1.*,e2.*
+# FROM scott.emp e1
+#   JOIN scott.emp e2 ON e1.SAL + ifnull(e1.COMM,0) > avg(e2.SAL + ifnull(e2.COMM, 0));
 
 # 10. 返回与 scott 从事相同工作的员工
 # SELECT *
@@ -179,7 +182,7 @@ SELECT
   s.HISAL
 FROM scott.emp e
   JOIN scott.salgrade s
-  ON (e.SAL+ifnull(e.COMM,0)) BETWEEN s.LOSAL AND s.HISAL
+    ON (e.SAL + ifnull(e.COMM, 0)) BETWEEN s.LOSAL AND s.HISAL
 WHERE s.GRADE = 4;
 
 
