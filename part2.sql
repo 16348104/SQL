@@ -128,8 +128,21 @@ FROM scott.dept d LEFT JOIN scott.emp e ON d.DEPTNO = e.DEPTNO
 GROUP BY d.DEPTNO;
 
 # 14. 返回员工的姓名、所在部门名及其工资
+SELECT
+  scott.emp.ENAME,
+  scott.dept.DNAME,
+  scott.emp.SAL + ifnull(emp.comm, 0) AS 工资
+FROM scott.emp
+  JOIN scott.dept ON emp.DEPTNO = dept.DEPTNO;
+
 # 15. 返回雇员表中不在同一部门但是从事相同工作的员工信息
+
 # 16. 返回员工的详细信息，包括部门名
+SELECT
+  e.*,
+  d.DNAME
+FROM scott.emp e
+  JOIN scott.dept d ON e.DEPTNO = d.DEPTNO;
 # 17. 返回员工工作及其从事此工作的最低工资
 SELECT
   emp.JOB,
