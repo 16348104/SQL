@@ -131,11 +131,14 @@ GROUP BY d.DEPTNO;
 SELECT
   scott.emp.ENAME,
   scott.dept.DNAME,
-  scott.emp.SAL + ifnull(emp.comm, 0) AS 工资
+  scott.emp.SAL + ifnull(emp.comm, 0) 工资
 FROM scott.emp
   JOIN scott.dept ON emp.DEPTNO = dept.DEPTNO;
 
 # 15. 返回雇员表中不在同一部门但是从事相同工作的员工信息
+SELECT e1.*,e2.*
+FROM scott.emp e1
+  JOIN scott.emp e2 ON e1.job = e2.JOB AND e1.DEPTNO <> e2.DEPTNO;
 
 # 16. 返回员工的详细信息，包括部门名
 SELECT
