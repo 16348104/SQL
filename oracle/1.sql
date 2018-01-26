@@ -13,10 +13,10 @@ WHERE t.table_name = 'T_COD_LIST_TB';
 
 -- 查询指定表的所有字段名和字段说明：
 SELECT
-  t.column_name,
-  t.column_name
+  t.column_name AS column_name1 ,
+  t.column_name AS column_name2
 FROM user_col_comments t
-WHERE t.table_name = 't_cod_list_tb';
+WHERE t.table_name = 'T_COD_LIST_TB';
 
 -- 查询所有表的表名和表说明：
 SELECT
