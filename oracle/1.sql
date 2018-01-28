@@ -13,7 +13,7 @@ WHERE t.table_name = 'T_COD_LIST_TB';
 
 -- 查询指定表的所有字段名和字段说明：
 SELECT
-  t.column_name AS column_name1 ,
+  t.column_name AS column_name1,
   t.column_name AS column_name2
 FROM user_col_comments t
 WHERE t.table_name = 'T_COD_LIST_TB';
@@ -25,7 +25,9 @@ SELECT
 FROM user_tables t INNER JOIN user_tab_comments s ON t.table_name = s.table_name;
 
 --查看表中列的说明
-select * from user_col_comments where TABLE_NAME='T_COD_LIST_TB';
+SELECT *
+FROM user_col_comments
+WHERE TABLE_NAME = 'T_COD_LIST_TB';
 
 -- 查询模糊表名的表名和表说明：
 SELECT t.table_name
@@ -41,29 +43,31 @@ WHERE t.table_name LIKE 'BIZ_DICT%';
 
 --查看当前用户下的所有表
 
-SQL> SELECT t.table_name FROM USER_TABLES t
+SELECT t.table_name
+FROM USER_TABLES t
 
 
 
 --查看表的说明
 
-SQL> select * from user_tab_comments where TABLE_NAME='USER_INFO';
-
-
+SELECT *
+FROM user_tab_comments
+WHERE TABLE_NAME = 'USER_INFO';
 
 --查看表的相关属性：字段名称,数据类型,是否主键，是否为空，缺省值，是否唯一，字段描述
-SQL> select * from user_tab_columns where table_name = 'SYS_USER';
-
-
+SELECT *
+FROM user_tab_columns
+WHERE table_name = 'SYS_USER';
 
 --查看表中列的说明
 
-SQL> select * from user_col_comments where TABLE_NAME='USER_INFO';
-
-
+SELECT *
+FROM user_col_comments
+WHERE TABLE_NAME = 'USER_INFO';
 
 --查询表中的ID列名(cu.*column_name 为ID)
 
 
- SQL> select cu.* from user_cons_columns cu, user_constraints au
-where cu.constraint_name = au.constraint_name and au.constraint_type = 'P' and au.table_name = '要查询的表';
+SELECT cu.*
+FROM user_cons_columns cu, user_constraints au
+WHERE cu.constraint_name = au.constraint_name AND au.constraint_type = 'P' AND au.table_name = '要查询的表';
