@@ -42,7 +42,6 @@ WHERE t.table_name LIKE 'BIZ_DICT%';
 -- oracle数据库表名区分大小写
 
 
-
 --查看当前用户下的所有表
 SELECT t.table_name
 FROM USER_TABLES t;
