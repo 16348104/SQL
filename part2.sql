@@ -184,5 +184,3 @@ FROM scott.emp e
   JOIN scott.salgrade s
     ON (e.SAL + ifnull(e.COMM, 0)) BETWEEN s.LOSAL AND s.HISAL
 WHERE s.GRADE = 4;
-
-
