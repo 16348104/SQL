@@ -65,3 +65,13 @@ WHERE TABLE_NAME = 'USER_INFO';
 SELECT cu.*
 FROM user_cons_columns cu, user_constraints au
 WHERE cu.constraint_name = au.constraint_name AND au.constraint_type = 'P' AND au.table_name = '要查询的表';
+
+
+--
+SELECT *
+FROM BBS_TOPIC
+WHERE USER_ID = '2010212283';
+
+SELECT *
+FROM BBS_REPLY
+WHERE USER_ID = '2006310601';
