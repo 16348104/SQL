@@ -66,7 +66,6 @@ SELECT cu.*
 FROM user_cons_columns cu, user_constraints au
 WHERE cu.constraint_name = au.constraint_name AND au.constraint_type = 'P' AND au.table_name = '要查询的表';
 
-
 --
 SELECT *
 FROM BBS_TOPIC
@@ -76,5 +75,47 @@ SELECT *
 FROM BBS_REPLY
 WHERE USER_ID = '2006310601';
 
-SELECT * FROM BBS_REPLY;
-SELECT * FROM BBS_REPLY WHERE TOPIC_ID='13643';
+SELECT *
+FROM BBS_REPLY;
+SELECT *
+FROM BBS_REPLY
+WHERE TOPIC_ID = '13643';
+
+-- 删除新版网络学堂重复作业记录
+DELETE
+FROM
+  COURSE_HOMEWORK_RECORD CHR
+WHERE
+  (
+    chr.STUDENT_ID, chr.HOMEWK_ID) IN
+  (
+    SELECT
+      STUDENT_ID,
+      HOMEWK_ID
+    FROM
+      COURSE_HOMEWORK_RECORD
+    GROUP BY
+      STUDENT_ID,
+      HOMEWK_ID
+    HAVING
+      COUNT(*) > 1)
+  AND ROWID NOT IN
+      (
+        SELECT MIN(ROWID)
+        FROM
+          COURSE_HOMEWORK_RECORD
+        GROUP BY
+          STUDENT_ID,
+          HOMEWK_ID
+        HAVING
+          COUNT(*) > 1);
+
+-- 删除新版网络学堂作业名单中序号是偶数的并重复的记录
+DELETE FROM COURSE_HOMEWORK_RECORD
+WHERE MOD(SEQ_ID, 2) = 0
+      AND HOMEWK_ID = 370059
+      AND STUDENT_ID IN (SELECT STUDENT_ID
+                         FROM COURSE_HOMEWORK_RECORD
+                         WHERE HOMEWK_ID = 370059
+                         GROUP BY STUDENT_ID
+                         HAVING COUNT(*) > 1);
