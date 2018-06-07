@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>0139a8e7-978a-45eb-a03d-336c4d54a0b2</OriginalElement>
+  <nodes>
+    <node x="2921.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_LN_BFJDB</node>
+    <node x="1896.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_SYXK_XKB</node>
+    <node x="3359.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_KJFWB_XS_XJB</node>
+    <node x="4457.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.DEMO_TEST</node>
+    <node x="1913.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_QZCYB</node>
+    <node x="0.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_SYXK_KCFZB</node>
+    <node x="1694.0" y="1277.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_XK_JSB</node>
+    <node x="4119.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_GGYDB</node>
+    <node x="1443.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_JS_JCCKS</node>
+    <node x="0.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_GGB</node>
+    <node x="2381.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_JXBJB</node>
+    <node x="729.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.BBS_TLTB</node>
+    <node x="0.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.GG_FJB</node>
+    <node x="0.0" y="1277.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_XS_XJB</node>
+    <node x="2275.0" y="0.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_KCB</node>
+    <node x="2661.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.SP_SPWJB</node>
+    <node x="2139.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_CODE_DWDMB</node>
+    <node x="0.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_ZJB</node>
+    <node x="976.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_JX_COASSISTANT</node>
+    <node x="4863.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_KJFWB</node>
+    <node x="385.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_FZFAB</node>
+    <node x="3272.0" y="1277.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_BBS_TLTB_ALL</node>
+    <node x="4139.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_LN_SJDDB</node>
+    <node x="770.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_JSB</node>
+    <node x="1978.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_CODE_KSLXB</node>
+    <node x="2846.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_JXBJB</node>
+    <node x="4575.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.SYS_LOG</node>
+    <node x="428.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_HBB</node>
+    <node x="4943.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_JSSFXX</node>
+    <node x="3230.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_CODE_XNXQ</node>
+    <node x="4153.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.CODE_WD_WDLXB</node>
+    <node x="2265.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_JSB</node>
+    <node x="2436.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_XSZYB</node>
+    <node x="1154.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.BBS_HHB</node>
+    <node x="4793.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_SYXK_KCFZB</node>
+    <node x="2503.0" y="1277.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_RWB</node>
+    <node x="630.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_JSB_JBXXB</node>
+    <node x="4789.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_JSJBXXB_WJB</node>
+    <node x="4688.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_JS_JBXXB</node>
+    <node x="4196.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_JS_KCJCSYB</node>
+    <node x="1007.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_XK_TKB</node>
+    <node x="3364.0" y="0.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_BBS_TLTB</node>
+    <node x="1659.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_JS_ZPB</node>
+    <node x="1075.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_MKPZB</node>
+    <node x="4376.0" y="0.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WD_WDB</node>
+    <node x="3024.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.YJ_YJXXB</node>
+    <node x="1526.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.BBS_BQB</node>
+    <node x="2952.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.XT_CSB</node>
+    <node x="2133.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_XSZY_LIST</node>
+    <node x="2293.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_CODE_KCLBB</node>
+    <node x="2608.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_CODE_KSFSB</node>
+    <node x="1608.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WJ_WJB</node>
+    <node x="0.0" y="0.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_KC_KCB</node>
+    <node x="0.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_KCXX_JSKCXX</node>
+    <node x="3191.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_MKB</node>
+    <node x="3704.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_GGB</node>
+    <node x="3338.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_KJXXB_WJWJB</node>
+    <node x="487.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_XK_SJDDB</node>
+    <node x="4322.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_JSQXB</node>
+    <node x="3848.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.CODE_WD_WDGSB</node>
+    <node x="4684.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_SJDDB</node>
+    <node x="1143.0" y="0.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_KCB</node>
+    <node x="350.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_XS_ZPB</node>
+    <node x="4755.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.TESTWL</node>
+    <node x="3708.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_KCYSB</node>
+    <node x="3513.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_KC_LNEJKCB</node>
+    <node x="5043.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.TEST</node>
+    <node x="1336.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_YS_ZPB</node>
+    <node x="4194.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.GG_XXB</node>
+    <node x="2130.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_JXBJMLB</node>
+    <node x="1444.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_SYRWB</node>
+    <node x="0.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.BQ_BQB</node>
+    <node x="3539.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_V_XK_XSKCB</node>
+    <node x="865.0" y="1277.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_LN_RWB</node>
+    <node x="3360.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_GGYDB</node>
+    <node x="2845.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_ZYXXB</node>
+    <node x="858.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_XK_LN_JSB</node>
+    <node x="1709.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_KJFLB</node>
+    <node x="572.0" y="3546.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_KCXX_JCXX</node>
+    <node x="0.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_KC_EJKCB</node>
+    <node x="1239.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_KJXXB</node>
+    <node x="4491.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_CZJLB</node>
+    <node x="1287.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_CJ_DJZCJB</node>
+    <node x="2634.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.BBS_FJB</node>
+    <node x="675.0" y="5090.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_CODE_JXFSB</node>
+    <node x="3791.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_GGFJB</node>
+    <node x="2997.0" y="4827.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_JSXSXX</node>
+    <node x="4064.0" y="1277.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_WLKC_QZCYB</node>
+    <node x="4163.0" y="2216.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_KC_EJKCB</node>
+    <node x="3830.0" y="4042.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_BBS_HHB</node>
+    <node x="2541.0" y="4461.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.YJ_YJMLB</node>
+    <node x="1846.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.ZHJW_JC_JCJBXXB</node>
+    <node x="3589.0" y="2946.0">0139a8e7-978a-45eb-a03d-336c4d54a0b2.TABLE:WLXT.WLKC_QZB</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.15220671444737835" x="2688.5" y="2641.0" />
+  <SelectedNodes>
+    <node>0139a8e7-978a-45eb-a03d-336c4d54a0b2.VIEW:WLXT.V_XK_SJDDB</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+
