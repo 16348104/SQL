@@ -119,3 +119,8 @@ WHERE MOD(SEQ_ID, 2) = 0
                          WHERE HOMEWK_ID = 370059
                          GROUP BY STUDENT_ID
                          HAVING COUNT(*) > 1);
+
+--单表用in
+SELECT *
+FROM ZHJW_V_XS_XJB
+WHERE XH IN ('2014080042', '2012011344', '2011011318', '2014012276');
