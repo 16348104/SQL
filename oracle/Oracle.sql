@@ -122,6 +122,8 @@ WHERE MOD(SEQ_ID, 2) = 0
 
 
 
+
+
 --单表用in
 SELECT *
 FROM ZHJW_V_XS_XJB
