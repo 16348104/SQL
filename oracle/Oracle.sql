@@ -120,16 +120,16 @@ WHERE MOD(SEQ_ID, 2) = 0
                          GROUP BY STUDENT_ID
                          HAVING COUNT(*) > 1);
 
-
-
-
-
 --单表用in
 SELECT *
 FROM ZHJW_V_XS_XJB
 WHERE XH IN ('2014080042', '2012011344', '2011011318', '2014012276');
 
+
 --UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
+UPDATE WLXT.ZHJW_V_XS_XJB
+SET EMAIL2 = 'xdx2016@mail.tsinghua.edu.cn'
+WHERE EMAIL2 LIKE 'xdx2016@tsinghua.edu.cn';
 
 
 SELECT *
