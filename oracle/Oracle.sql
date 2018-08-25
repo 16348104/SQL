@@ -198,5 +198,15 @@ SELECT *
 FROM WLKC_KCB
 WHERE WLKCID='30240551';
 
+--学生选课
+SELECT
+  q.wlkcid,
+  z.XH,
+  z.XM
+FROM WLKC_QZCYB q
+  JOIN ZHJW_V_XS_XJB z
+    ON q.RYH = z.XH
+WHERE q.WLKCID = '60240202';
+
 
 
