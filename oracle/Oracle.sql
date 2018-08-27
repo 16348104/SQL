@@ -198,7 +198,10 @@ SELECT *
 FROM WLKC_KCB
 WHERE WLKCID='30240551';
 
+
 --学生选课
+--602402022011990058(全体方案)
+--49928(全体组)
 SELECT
   q.wlkcid,
   z.XH,
