@@ -125,7 +125,6 @@ SELECT *
 FROM ZHJW_V_XS_XJB
 WHERE XH IN ('2014080042', '2012011344', '2011011318', '2014012276');
 
-
 --UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
 UPDATE WLXT.ZHJW_V_XS_XJB
 SET EMAIL2 = 'xdx2016@mail.tsinghua.edu.cn'
@@ -191,13 +190,12 @@ WHERE JSH = '2011990058' AND WLKCID = '80240673';
 --课程负责人
 SELECT ryh
 FROM V_WLKC_JSB_ALL
-WHERE wlkcid='30240551';
+WHERE wlkcid = '30240551';
 
 --教师课程表
 SELECT *
 FROM WLKC_KCB
-WHERE WLKCID='30240551';
-
+WHERE WLKCID = '30240551';
 
 --学生选课
 --602402022011990058(全体方案)
@@ -211,5 +209,9 @@ FROM WLKC_QZCYB q
     ON q.RYH = z.XH
 WHERE q.WLKCID = '60240202';
 
+--
+SELECT *
+FROM wlkc_qzcyb cy, wlkc_kcb kc
+WHERE cy.ryh = '2015012124' AND cy.wlkcid = kc.wlkcid AND kc.xnxq = '2018-2019-1';
 
 
