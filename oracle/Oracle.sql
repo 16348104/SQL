@@ -215,3 +215,11 @@ FROM wlkc_qzcyb cy, wlkc_kcb kc
 WHERE cy.ryh = '2015012124' AND cy.wlkcid = kc.wlkcid AND kc.xnxq = '2018-2019-1';
 
 
+--获取当前学年学期（唯一）
+SELECT this.XNXQ   AS XNXQ1,
+       this.KSSJ   AS KSSJ2,
+       this.JSSJ   AS JSSJ3,
+       this.XNXQMC AS XNXQMC4
+FROM ZHJW_V_CODE_XNXQ this
+WHERE '2019-06-26' >= this.KSSJ
+  AND '2019-06-26' <= this.JSSJ;
