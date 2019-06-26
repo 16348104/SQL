@@ -1,3 +1,5 @@
+-- noinspection SqlResolveForFile
+
 -- 查询所有表名：
 SELECT table_name
 FROM user_tables;
@@ -153,7 +155,8 @@ WHERE JSH = '2004980847';*/
 
 SELECT *
 FROM WLKC_XSZYB
-WHERE ZYID = '8080801f64693ef901646958285f000c'
+WHERE ZYID = '8080801f64693ef901646958285f000c';
+
 
 --教师信息
 -- SELECT *
