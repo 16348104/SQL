@@ -35,9 +35,11 @@ where XNXQ = '2013-2014-1'
 --   and KCH = '02070111'
 --   and KXH = '91';
 
-
+-- 成绩分析表
 select XNXQ, KCH, KXH, JSH, LRZTM, CZR, CZSJ
 from CJ_FXB
 where XNXQ = '2013-2014-2'
   and KCH = '02070111'
   and KXH = '91';
+
+-- L29101 深研院加课  原jsh1='1991990219'
