@@ -1,35 +1,71 @@
 /* Formatted on 2019/9/19 18:26:38 (QP5 v5.256.13226.35510) */
---±¾¿ÆÉú
+--æœ¬ç§‘
 
-  SELECT *
-    FROM V_CJ_BXQKCB_KC_JS_BS kc, xk_bks_xkb xk
-   WHERE kc.kch = xk.kch AND kc.kxh = xk.kxh AND kc.xnxq = xk.xnxq
-ORDER BY kc.xnxq DESC
---ÑĞ¾¿Éú
+SELECT *
+FROM V_CJ_BXQKCB_KC_JS_BS kc,
+     xk_bks_xkb xk
+WHERE kc.kch = xk.kch
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
+ORDER BY kc.xnxq DESC;
+
+--ç ”ç©¶ç”Ÿ
 /* Formatted on 2019/9/19 18:26:58 (QP5 v5.256.13226.35510) */
-  SELECT *
-    FROM V_CJ_BXQKCB_KC_JS_BS kc, xk_yjs_xkb xk
-   WHERE kc.kch = xk.kch AND kc.kxh = xk.kxh AND kc.xnxq = xk.xnxq
-ORDER BY kc.xnxq DESC
+SELECT *
+FROM V_CJ_BXQKCB_KC_JS_BS kc,
+     xk_yjs_xkb xk
+WHERE kc.kch = xk.kch
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
+ORDER BY kc.xnxq DESC;
 
---½øĞŞÉú
+
+--è¿›ä¿®ç”Ÿ
 /* Formatted on 2019/9/19 18:27:03 (QP5 v5.256.13226.35510) */
-  SELECT *
-    FROM V_CJ_BXQKCB_KC_JS_BS kc, xk_jxs_xkb xk
-   WHERE kc.kch = xk.kch AND kc.kxh = xk.kxh AND kc.xnxq = xk.xnxq
-ORDER BY kc.xnxq DESC
+SELECT *
+FROM V_CJ_BXQKCB_KC_JS_BS kc,
+     xk_jxs_xkb xk
+WHERE kc.kch = xk.kch
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
+ORDER BY kc.xnxq DESC;
 
---ÅÔÌıÉú
+
+--æ—å¬ç”Ÿ
 /* Formatted on 2019/9/19 18:27:13 (QP5 v5.256.13226.35510) */
-  SELECT *
-    FROM V_CJ_BXQKCB_KC_JS_BS kc, pt_xkb xk
-   WHERE kc.kch = xk.kch AND kc.kxh = xk.kxh AND kc.xnxq = xk.xnxq
-ORDER BY kc.xnxq DESC
+SELECT *
+FROM V_CJ_BXQKCB_KC_JS_BS kc,
+     pt_xkb xk
+WHERE kc.kch = xk.kch
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
+ORDER BY kc.xnxq DESC;
 
---ÉîÑĞÔº
+
+--æ·±ç ”é™¢
 /* Formatted on 2019/9/19 18:27:08 (QP5 v5.256.13226.35510) */
 SELECT *
-  FROM V_CJ_BXQKCB_KC_JS_BS
- WHERE kch IN (SELECT kch
-                 FROM kc_kcb
-                WHERE kkdwnm = '291')
+FROM V_CJ_BXQKCB_KC_JS_BS
+WHERE kch IN (SELECT kch
+              FROM kc_kcb
+              WHERE kkdwnm = '291');
+
+-- æŸ¥æ‰¾ç­çº§é‡Œå­¦å·>=2015çš„
+select *
+from V_CJ_BXQKCB_KC_JS_BS kc,
+     xk_bks_xkb xk
+where kc.kch = xk.kch
+  and kc.kxh = xk.kxh
+  and kc.xnxq = xk.xnxq
+  and (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
+order by kc.kch, kc.kxh;
+
+-- æŸ¥æ‰¾ç­çº§é‡Œå­¦å·<2015çš„
+select *
+from V_CJ_BXQKCB_KC_JS_BS kc,
+     xk_bks_xkb xk
+where kc.kch = xk.kch
+  and kc.kxh = xk.kxh
+  and kc.xnxq = xk.xnxq
+  and not (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
+order by kc.kch, kc.kxh;
