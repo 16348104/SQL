@@ -20,7 +20,7 @@ WHERE kc.kch = xk.kch
 ORDER BY kc.xnxq DESC;
 
 
---进修生
+-- 进修生
 /* Formatted on 2019/9/19 18:27:03 (QP5 v5.256.13226.35510) */
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
@@ -73,8 +73,26 @@ order by kc.kch, kc.kxh;
 -- 未提交成绩的本科生课程
 select *
 from CJ_FXB t,
-     cj_bks_bxqcjb c
-where c.xnxq = t.xnxq
-  and c.kch = t.kch
-  and c.kxh = t.kxh
+     cj_bks_bxqcjb b
+where t.xnxq = b.xnxq
+  and t.kch = b.kch
+  and t.kxh = b.kxh
+  and t.lrztm = '002';
+
+-- 未提交成绩的研究生课程
+select *
+from CJ_FXB t,
+     cj_yjs_bxqcjb y
+where y.xnxq = t.xnxq
+  and y.kch = t.kch
+  and y.kxh = t.kxh
+  and t.lrztm = '002';
+
+--进修生未提交的课程
+select *
+from CJ_FXB t,
+     xk_jxs_xkb jx
+where t.xnxq = jx.xnxq
+  and t.kch = jx.kch
+  and t.kxh = jx.kxh
   and t.lrztm = '002';
