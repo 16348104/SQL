@@ -72,27 +72,47 @@ order by kc.kch, kc.kxh;
 
 -- 未提交成绩的本科生课程
 select *
-from CJ_FXB t,
+from CJ_FXB t
+inner join
      cj_bks_bxqcjb b
-where t.xnxq = b.xnxq
+on
+( t.xnxq = b.xnxq
   and t.kch = b.kch
-  and t.kxh = b.kxh
-  and t.lrztm = '002';
+  and t.kxh = b.kxh)
+where t.lrztm = '002';
 
 -- 未提交成绩的研究生课程
 select *
-from CJ_FXB t,
-     cj_yjs_bxqcjb y
-where y.xnxq = t.xnxq
-  and y.kch = t.kch
-  and y.kxh = t.kxh
-  and t.lrztm = '002';
+from CJ_FXB t
+         inner join
+     cj_yjs_bxqcjb yj on
+         (t.xnxq = yj.xnxq
+             and t.kch = yj.kch
+             and t.kxh = yj.kxh)
+where t.lrztm = '002';
 
 --进修生未提交的课程
 select *
-from CJ_FXB t,
-     xk_jxs_xkb jx
-where t.xnxq = jx.xnxq
-  and t.kch = jx.kch
-  and t.kxh = jx.kxh
-  and t.lrztm = '002';
+from CJ_FXB t
+         inner join xk_jxs_xkb jx
+                    on (t.xnxq = jx.xnxq
+                        and t.kch = jx.kch
+                        and t.kxh = jx.kxh)
+where t.lrztm = '002';
+
+--旁听生未提交的课程--
+select *
+from CJ_FXB t
+         inner join PT_XKB pt
+                    on (t.xnxq = pt.xnxq and t.kch = pt.kch and t.kxh = pt.kxh)
+where t.LRZTM = '002';
+--  where t.xnxq = pt.xnxq
+--    and t.kch = pt.kch
+--    and t.kxh = pt.kxh
+
+
+select *
+from CJ_FXB t
+         left outer join PT_XKB pt
+                         on (t.xnxq = pt.xnxq and t.kch = pt.kch and t.kxh = pt.kxh)
+where t.LRZTM = '001';
