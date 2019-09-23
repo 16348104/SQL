@@ -90,6 +90,11 @@ where kc.kch = xk.kch
   and not (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
 order by kc.kch, kc.kxh;
 
+
+--
+--
+--
+--
 -- 未提交成绩的本科生课程
 select *
 from CJ_FXB t
