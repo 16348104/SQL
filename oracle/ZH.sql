@@ -50,7 +50,7 @@ WHERE kch IN (SELECT kch
               FROM kc_kcb
               WHERE kkdwnm = '291');
 
--- 查找班级里学号>=2015的
+-- 查找班级里本科生学号>=2015的
 select *
 from V_CJ_BXQKCB_KC_JS_BS kc,
      xk_bks_xkb xk
@@ -60,7 +60,7 @@ where kc.kch = xk.kch
   and (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
 order by kc.kch, kc.kxh;
 
--- 查找班级里学号<2015的
+-- 查找班级里本科生学号<2015的
 select *
 from V_CJ_BXQKCB_KC_JS_BS kc,
      xk_bks_xkb xk
@@ -70,15 +70,35 @@ where kc.kch = xk.kch
   and not (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
 order by kc.kch, kc.kxh;
 
+-- 查找班级里研究生学号>=2015的
+select *
+from V_CJ_BXQKCB_KC_JS_BS kc,
+     XK_YJS_XKB xk
+where kc.kch = xk.kch
+  and kc.kxh = xk.kxh
+  and kc.xnxq = xk.xnxq
+  and (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
+order by kc.kch, kc.kxh;
+
+-- 查找班级里研究生学号<2015的
+select *
+from V_CJ_BXQKCB_KC_JS_BS kc,
+     XK_YJS_XKB xk
+where kc.kch = xk.kch
+  and kc.kxh = xk.kxh
+  and kc.xnxq = xk.xnxq
+  and not (xk.xh like '2015%' or xk.xh like '2016%' or xk.xh like '2017%' or xk.xh like '2018%' or xk.xh like '2019%')
+order by kc.kch, kc.kxh;
+
 -- 未提交成绩的本科生课程
 select *
 from CJ_FXB t
-inner join
+         inner join
      cj_bks_bxqcjb b
-on
-( t.xnxq = b.xnxq
-  and t.kch = b.kch
-  and t.kxh = b.kxh)
+     on
+         (t.xnxq = b.xnxq
+             and t.kch = b.kch
+             and t.kxh = b.kxh)
 where t.lrztm = '002';
 
 -- 未提交成绩的研究生课程
@@ -109,7 +129,6 @@ where t.LRZTM = '002';
 --  where t.xnxq = pt.xnxq
 --    and t.kch = pt.kch
 --    and t.kxh = pt.kxh
-
 
 select *
 from CJ_FXB t
