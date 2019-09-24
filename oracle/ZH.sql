@@ -82,7 +82,7 @@ WHERE kc.kch = xk.kch
       AND
       NOT (xk.xh LIKE '2015%' OR xk.xh LIKE '2016%' OR xk.xh LIKE '2017%' OR xk.xh LIKE '2018%' OR xk.xh LIKE '2019%')
 ORDER BY kc.kch, kc.kxh;
-
+--
 --
 --
 --
