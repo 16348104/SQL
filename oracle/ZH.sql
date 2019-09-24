@@ -91,41 +91,49 @@ order by kc.kch, kc.kxh;
 --
 --
 -- 未提交成绩的本科生课程
-select *
+-- select t.XNXQ,t.KXH,t.KCH,t.LRZTM,t.JSH
+select t.XNXQ,t.KXH,t.KCH,t.LRZTM,bk.JSH1
 from CJ_FXB t
          inner join
-     cj_bks_bxqcjb b
+     cj_bks_bxqcjb bk
      on
-         (t.xnxq = b.xnxq
-             and t.kch = b.kch
-             and t.kxh = b.kxh)
-where t.lrztm = '002';
+         (t.xnxq = bk.xnxq
+             and t.kch = bk.kch
+             and t.kxh = bk.kxh)
+where t.lrztm = '002'
+order by t.XNXQ desc;
 
 -- 未提交成绩的研究生课程
-select *
+-- select *
+select t.XNXQ,t.KXH,t.KCH,t.LRZTM,yj.JSH1
 from CJ_FXB t
          inner join
      cj_yjs_bxqcjb yj on
          (t.xnxq = yj.xnxq
              and t.kch = yj.kch
              and t.kxh = yj.kxh)
-where t.lrztm = '002';
+where t.lrztm = '002'
+order by t.XNXQ desc;
 
 --进修生未提交的课程
-select *
+-- select *
+select t.XNXQ,t.KXH,t.KCH,t.LRZTM,jx.JSH1
 from CJ_FXB t
-         inner join xk_jxs_xkb jx
+         inner join cj_jxs_cjb jx
                     on (t.xnxq = jx.xnxq
                         and t.kch = jx.kch
                         and t.kxh = jx.kxh)
-where t.lrztm = '002';
+where t.lrztm = '002'
+order by t.XNXQ desc;
 
 --旁听生未提交的课程--
-select *
+-- select *
+select t.XNXQ,t.KXH,t.KCH,t.LRZTM,pt.JSH
 from CJ_FXB t
          inner join PT_XKB pt
                     on (t.xnxq = pt.xnxq and t.kch = pt.kch and t.kxh = pt.kxh)
-where t.LRZTM = '002';
+where t.LRZTM = '002'
+order by t.XNXQ desc;
 --  where t.xnxq = pt.xnxq
 --    and t.kch = pt.kch
 --    and t.kxh = pt.kxh
@@ -137,7 +145,16 @@ from CJ_FXB t
 where t.LRZTM = '001';
 
 -- bks
--- 2001990104   2013-2014-2	30450352（0）学生多
+-- 2001990104   2013-2014-2	30450352(0)
+
+
+-- 1995990061   2013-2014-2  20250103(0)
 -- yjs
--- 2010610319   2013-2014-2 80661933（0)
--- 1998990077   2013-2014-1 80590493 (0) 80590463 (0)
+-- 2010610319   2013-2014-2 80661933(0)
+-- 1998990077   2013-2014-1 80590493(0) 80590463 (0)
+
+
+-- 1992990038   2013-2014-1 70000022(0)
+-- 1984990056   2013-2014-1 80220191 (200)
+-- 1970990283   2013-2014-1 80220191 (200)
+-- 2000990115
