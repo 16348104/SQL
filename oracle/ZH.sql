@@ -1,4 +1,3 @@
-
 --本科生
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
@@ -92,7 +91,7 @@ order by kc.kch, kc.kxh;
 --
 -- 未提交成绩的本科生课程
 -- select t.XNXQ,t.KXH,t.KCH,t.LRZTM,t.JSH
-select t.XNXQ,t.KXH,t.KCH,t.LRZTM,bk.JSH1
+select t.XNXQ, t.KXH, t.KCH, t.LRZTM, bk.JSH1
 from CJ_FXB t
          inner join
      cj_bks_bxqcjb bk
@@ -105,7 +104,7 @@ order by t.XNXQ desc;
 
 -- 未提交成绩的研究生课程
 -- select *
-select t.XNXQ,t.KXH,t.KCH,t.LRZTM,yj.JSH1
+select t.XNXQ, t.KXH, t.KCH, t.LRZTM, yj.JSH1
 from CJ_FXB t
          inner join
      cj_yjs_bxqcjb yj on
@@ -117,7 +116,7 @@ order by t.XNXQ desc;
 
 --进修生未提交的课程
 -- select *
-select t.XNXQ,t.KXH,t.KCH,t.LRZTM,jx.JSH1
+select t.XNXQ, t.KXH, t.KCH, t.LRZTM, jx.JSH1
 from CJ_FXB t
          inner join cj_jxs_cjb jx
                     on (t.xnxq = jx.xnxq
@@ -128,7 +127,7 @@ order by t.XNXQ desc;
 
 --旁听生未提交的课程--
 -- select *
-select t.XNXQ,t.KXH,t.KCH,t.LRZTM,pt.JSH
+select t.XNXQ, t.KXH, t.KCH, t.LRZTM, pt.JSH
 from CJ_FXB t
          inner join PT_XKB pt
                     on (t.xnxq = pt.xnxq and t.kch = pt.kch and t.kxh = pt.kxh)
