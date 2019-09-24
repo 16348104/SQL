@@ -162,8 +162,8 @@ ORDER BY t.XNXQ DESC;
 --  where t.xnxq = pt.xnxq
 --    and t.kch = pt.kch
 --    and t.kxh = pt.kxh
-
-
+--
+--
 SELECT *
 FROM CJ_FXB t
   LEFT OUTER JOIN PT_XKB pt
