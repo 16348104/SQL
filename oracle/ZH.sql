@@ -1,5 +1,5 @@
 
---本科
+--本科生
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
      xk_bks_xkb xk
@@ -135,3 +135,6 @@ from CJ_FXB t
          left outer join PT_XKB pt
                          on (t.xnxq = pt.xnxq and t.kch = pt.kch and t.kxh = pt.kxh)
 where t.LRZTM = '001';
+
+-- 2001990104   2013-2014-2	30450352（0）学生多
+-- 2010610319   2013-2014-2 80661933（0)
