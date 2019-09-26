@@ -1,37 +1,37 @@
 --本科生
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  xk_bks_xkb xk
+     xk_bks_xkb xk
 WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
 ORDER BY kc.xnxq DESC;
 
 --研究生
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  xk_yjs_xkb xk
+     xk_yjs_xkb xk
 WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
 ORDER BY kc.xnxq DESC;
 
 -- 进修生
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  xk_jxs_xkb xk
+     xk_jxs_xkb xk
 WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
 ORDER BY kc.xnxq DESC;
 
 --旁听生
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  pt_xkb xk
+     pt_xkb xk
 WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
+  AND kc.kxh = xk.kxh
+  AND kc.xnxq = xk.xnxq
 ORDER BY kc.xnxq DESC;
 
 --深研院
@@ -44,121 +44,117 @@ WHERE kch IN (SELECT kch
 -- 查找班级里本科生学号>=2015的
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  xk_bks_xkb xk
-WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
-      AND (xk.xh LIKE '2015%' OR xk.xh LIKE '2016%' OR xk.xh LIKE '2017%' OR xk.xh LIKE '2018%' OR xk.xh LIKE '2019%')
-ORDER BY kc.kch, kc.kxh;
+     CJ_BKS_BXQCJB cj
+WHERE kc.kch = cj.kch
+  AND kc.kxh = cj.kxh
+  AND kc.xnxq = cj.xnxq
+  AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
+ORDER BY kc.kch;
 
 -- 查找班级里本科生学号<2015的
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  xk_bks_xkb xk
-WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
-      AND
-      NOT (xk.xh LIKE '2015%' OR xk.xh LIKE '2016%' OR xk.xh LIKE '2017%' OR xk.xh LIKE '2018%' OR xk.xh LIKE '2019%')
+     CJ_BKS_BXQCJB cj
+WHERE kc.kch = cj.kch
+  AND kc.kxh = cj.kxh
+  AND kc.xnxq = cj.xnxq
+  AND NOT (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
 ORDER BY kc.kch, kc.kxh;
+
+
 
 -- 查找班级里研究生学号>=2015的
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  XK_YJS_XKB xk
-WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
-      AND (xk.xh LIKE '2015%' OR xk.xh LIKE '2016%' OR xk.xh LIKE '2017%' OR xk.xh LIKE '2018%' OR xk.xh LIKE '2019%')
-ORDER BY kc.kch, kc.kxh;
+  CJ_YJS_BXQCJB cj
+WHERE kc.kch = cj.kch
+      AND kc.kxh = cj.kxh
+      AND kc.xnxq = cj.xnxq
+      AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
+ORDER BY kc.XNXQ;
 
 -- 查找班级里研究生学号<2015的
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  XK_YJS_XKB xk
-WHERE kc.kch = xk.kch
-      AND kc.kxh = xk.kxh
-      AND kc.xnxq = xk.xnxq
-      AND
-      NOT (xk.xh LIKE '2015%' OR xk.xh LIKE '2016%' OR xk.xh LIKE '2017%' OR xk.xh LIKE '2018%' OR xk.xh LIKE '2019%')
-ORDER BY kc.kch, kc.kxh;
+     CJ_YJS_BXQCJB cj
+WHERE kc.kch = cj.kch
+  AND kc.kxh = cj.kxh
+  AND kc.xnxq = cj.xnxq
+  AND NOT (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
+ORDER BY kc.XNXQ;
 --
 --
 --
 --
 --
 -- 未提交成绩的本科生课程
--- select t.XNXQ,t.KXH,t.KCH,t.LRZTM,t.JSH
-SELECT
-  t.XNXQ   AS 学年学期,
-  t.KCH    AS 课程号,
-  t.KXH    AS 课程号,
-  t.LRZTM  AS 全体录入状态,
-  bk.JSH1  AS 教师号,
-  bk.XH    AS 学号,
-  bk.LRZTM AS 单独录入状态
+-- select *
+SELECT t.XNXQ   AS 学年学期,
+       t.KCH    AS 课程号,
+       t.KXH    AS 课程号,
+       t.LRZTM  AS 全体录入状态,
+       bk.JSH1  AS 教师号,
+       bk.XH    AS 学号,
+       bk.LRZTM AS 单独录入状态
 FROM CJ_FXB t
-  INNER JOIN
-  cj_bks_bxqcjb bk
-    ON
-      (t.xnxq = bk.xnxq
-       AND t.kch = bk.kch
-       AND t.kxh = bk.kxh)
+         INNER JOIN
+     cj_bks_bxqcjb bk
+     ON
+         (t.xnxq = bk.xnxq
+             AND t.kch = bk.kch
+             AND t.kxh = bk.kxh)
 WHERE t.lrztm = '002'
 ORDER BY t.XNXQ DESC;
 
 -- 未提交成绩的研究生课程
 -- select *
-SELECT
-  t.XNXQ   AS 学年学期,
-  t.KCH    AS 课程号,
-  t.KXH    AS 课程号,
-  t.LRZTM  AS 全体录入状态,
-  yj.JSH1  AS 教师号,
-  yj.XH    AS 学号,
-  yj.LRZTM AS 单独录入状态
+SELECT t.XNXQ   AS 学年学期,
+       t.KCH    AS 课程号,
+       t.KXH    AS 课程号,
+       t.LRZTM  AS 全体录入状态,
+       yj.JSH1  AS 教师号,
+       yj.XH    AS 学号,
+       yj.LRZTM AS 单独录入状态
 FROM CJ_FXB t
-  INNER JOIN
-  cj_yjs_bxqcjb yj ON
-                     (t.xnxq = yj.xnxq
-                      AND t.kch = yj.kch
-                      AND t.kxh = yj.kxh)
+         INNER JOIN
+     cj_yjs_bxqcjb yj ON
+         (t.xnxq = yj.xnxq
+             AND t.kch = yj.kch
+             AND t.kxh = yj.kxh)
 WHERE t.lrztm = '002'
 ORDER BY t.XNXQ DESC;
 
 --进修生未提交的课程
 -- select *
-SELECT
-  t.XNXQ   AS 学年学期,
-  t.KCH    AS 课程号,
-  t.KXH    AS 课序号,
-  t.LRZTM  AS 全体录入状态,
-  jx.JSH1  AS 教师号,
-  jx.XH    AS 学号,
-  jx.LRZTM AS 单独录入状态
+SELECT t.XNXQ   AS 学年学期,
+       t.KCH    AS 课程号,
+       t.KXH    AS 课序号,
+       t.LRZTM  AS 全体录入状态,
+       jx.JSH1  AS 教师号,
+       jx.XH    AS 学号,
+       jx.LRZTM AS 单独录入状态
 FROM CJ_FXB t
-  INNER JOIN cj_jxs_cjb jx
-    ON (t.xnxq = jx.xnxq
-        AND t.kch = jx.kch
-        AND t.kxh = jx.kxh)
+         INNER JOIN cj_jxs_cjb jx
+                    ON (t.xnxq = jx.xnxq
+                        AND t.kch = jx.kch
+                        AND t.kxh = jx.kxh)
 WHERE t.lrztm = '002'
 ORDER BY t.XNXQ DESC;
 
 --旁听生未提交的课程--
 -- select *
-SELECT
-  t.XNXQ   AS 学年学期,
-  t.KCH    AS 课程号,
-  t.KXH    AS 课序号,
-  t.LRZTM  AS 全体录入状态,
-  pt.JSH   AS 教师号,
-  pt.PTXH  AS 学号,
-  pt.LRZTM AS 单独录入状态
+SELECT t.XNXQ   AS 学年学期,
+       t.KCH    AS 课程号,
+       t.KXH    AS 课序号,
+       t.LRZTM  AS 全体录入状态,
+       pt.JSH   AS 教师号,
+       pt.PTXH  AS 学号,
+       pt.LRZTM AS 单独录入状态
 FROM CJ_FXB t
-  INNER JOIN PT_XKB pt
-    ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
-WHERE t.LRZTM = '002'
-ORDER BY t.XNXQ DESC;
+         INNER JOIN PT_XKB pt
+                    ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
+WHERE t.LRZTM = '001'
+ORDER BY t.XNXQ,t.JSH DESC;
 --  where t.xnxq = pt.xnxq
 --    and t.kch = pt.kch
 --    and t.kxh = pt.kxh
@@ -166,8 +162,8 @@ ORDER BY t.XNXQ DESC;
 --
 SELECT *
 FROM CJ_FXB t
-  LEFT OUTER JOIN PT_XKB pt
-    ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
+         LEFT OUTER JOIN PT_XKB pt
+                         ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
 WHERE t.LRZTM = '001';
 
 -- bks
@@ -187,3 +183,9 @@ WHERE t.LRZTM = '001';
 -- 2000990115
 -- jxs
 -- L29101       2010-2011-1  40510233(1)
+
+-- bks2015
+-- 2004990063 2013-2014-1 02070111(91) p/f
+
+--jys2015
+--2000990115  2013-2014-1 90660133(0)
