@@ -189,3 +189,6 @@ WHERE t.LRZTM = '001';
 
 --jys2015
 --2000990115  2013-2014-1 90660133(0)
+
+select t.*, t.rowid from XS_YJS_XJB t
+where xh like '2018210001%'
