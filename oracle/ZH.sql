@@ -62,15 +62,14 @@ WHERE kc.kch = cj.kch
 ORDER BY kc.kch, kc.kxh;
 
 
-
 -- 查找班级里研究生学号>=2015的
 SELECT *
 FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  CJ_YJS_BXQCJB cj
+     CJ_YJS_BXQCJB cj
 WHERE kc.kch = cj.kch
-      AND kc.kxh = cj.kxh
-      AND kc.xnxq = cj.xnxq
-      AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
+  AND kc.kxh = cj.kxh
+  AND kc.xnxq = cj.xnxq
+  AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
 ORDER BY kc.XNXQ;
 
 -- 查找班级里研究生学号<2015的
@@ -154,7 +153,7 @@ FROM CJ_FXB t
          INNER JOIN PT_XKB pt
                     ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
 WHERE t.LRZTM = '001'
-ORDER BY t.XNXQ,t.JSH DESC;
+ORDER BY t.XNXQ, t.JSH DESC;
 --  where t.xnxq = pt.xnxq
 --    and t.kch = pt.kch
 --    and t.kxh = pt.kxh
@@ -165,6 +164,11 @@ FROM CJ_FXB t
          LEFT OUTER JOIN PT_XKB pt
                          ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
 WHERE t.LRZTM = '001';
+
+-- 查学籍表
+select *
+from XS_YJS_XJB
+where xh like '2018%'
 
 -- bks
 -- 2001990104   2013-2014-2	30450352(0)
@@ -189,6 +193,3 @@ WHERE t.LRZTM = '001';
 
 --jys2015
 --2000990115  2013-2014-2 90660133(0)
-
-select t.*, t.rowid from XS_YJS_XJB t
-where xh like '2018210001%'
