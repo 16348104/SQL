@@ -165,6 +165,7 @@ FROM CJ_FXB t
                          ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
 WHERE t.LRZTM = '001';
 
+
 -- 查学籍表
 select *
 from XS_YJS_XJB
