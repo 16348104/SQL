@@ -82,22 +82,21 @@ WHERE kc.kch = cj.kch
   AND NOT (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
 ORDER BY kc.XNXQ;
 
---进修生
-SELECT *
-FROM V_CJ_BXQKCB_KC_JS_BS kc,
-  cj_jxs_cjb cj
-WHERE kc.kch = cj.kch
-      AND kc.kxh = cj.kxh
-      AND kc.xnxq = cj.xnxq
-      AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
-ORDER BY cj.xh;
---
+-- --进修生
+-- SELECT *
+-- FROM V_CJ_BXQKCB_KC_JS_BS kc,
+--   cj_jxs_cjb cj
+-- WHERE kc.kch = cj.kch
+--       AND kc.kxh = cj.kxh
+--       AND kc.xnxq = cj.xnxq
+--       AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
+-- ORDER BY kc.XNXQ;
+
 --
 --
 --
 --
 -- 未提交成绩的本科生课程
--- select *
 SELECT t.XNXQ   AS 学年学期,
        t.KCH    AS 课程号,
        t.KXH    AS 课程号,
@@ -116,7 +115,6 @@ WHERE t.lrztm = '002'
 ORDER BY t.XNXQ DESC;
 
 -- 未提交成绩的研究生课程
--- select *
 SELECT t.XNXQ   AS 学年学期,
        t.KCH    AS 课程号,
        t.KXH    AS 课程号,
@@ -134,7 +132,6 @@ WHERE t.lrztm = '002'
 ORDER BY t.XNXQ DESC;
 
 --进修生未提交的课程
--- select *
 SELECT t.XNXQ   AS 学年学期,
        t.KCH    AS 课程号,
        t.KXH    AS 课序号,
@@ -151,7 +148,6 @@ WHERE t.lrztm = '002'
 ORDER BY t.XNXQ DESC;
 
 --旁听生未提交的课程--
--- select *
 SELECT t.XNXQ   AS 学年学期,
        t.KCH    AS 课程号,
        t.KXH    AS 课序号,
@@ -163,7 +159,7 @@ FROM CJ_FXB t
          INNER JOIN PT_XKB pt
                     ON (t.xnxq = pt.xnxq AND t.kch = pt.kch AND t.kxh = pt.kxh)
 WHERE t.LRZTM = '001'
-ORDER BY t.XNXQ, t.JSH DESC;
+ORDER BY t.XNXQ DESC;
 --  where t.xnxq = pt.xnxq
 --    and t.kch = pt.kch
 --    and t.kxh = pt.kxh
@@ -205,7 +201,11 @@ where xh like '2018%'
 --jys2015
 --2000990115  2013-2014-2 90660133(0)
 
+--pts
+--1999990019 2010-2011-1 80320062(0)/70320153(0)
+--1999990252 2010-2011-1 70320153(0)
 
 --jxs选本科生课
 --1999990292  2013-2014-2 00120072(90)
 --L29101      2010-2011-1 40510233(1)
+
