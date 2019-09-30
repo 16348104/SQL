@@ -81,6 +81,16 @@ WHERE kc.kch = cj.kch
   AND kc.xnxq = cj.xnxq
   AND NOT (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
 ORDER BY kc.XNXQ;
+
+--进修生
+SELECT *
+FROM V_CJ_BXQKCB_KC_JS_BS kc,
+  cj_jxs_cjb cj
+WHERE kc.kch = cj.kch
+      AND kc.kxh = cj.kxh
+      AND kc.xnxq = cj.xnxq
+      AND (cj.xh LIKE '2015%' OR cj.xh LIKE '2016%' OR cj.xh LIKE '2017%' OR cj.xh LIKE '2018%' OR cj.xh LIKE '2019%')
+ORDER BY cj.xh;
 --
 --
 --
@@ -194,3 +204,8 @@ where xh like '2018%'
 
 --jys2015
 --2000990115  2013-2014-2 90660133(0)
+
+
+--jxs选本科生课
+--1999990292  2013-2014-2 00120072(90)
+--L29101      2010-2011-1 40510233(1)
