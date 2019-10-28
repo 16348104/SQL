@@ -4,11 +4,11 @@
 -- cj_jxs_cjb
 -- pt_xkb    LRZTM   001已提交002暂存
 
--- update cj_bks_bxqcjb
+-- update cj_yjs_bxqcjb
 -- set LRZTM = '002'
 -- where XNXQ = '2013-2014-1'
---   and KCH = '02070111'
---   and KXH = '91';
+--   and KCH = '90660133'
+--   and KXH = '0';
 
 select xnxq,
        kch,
