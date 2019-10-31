@@ -21,15 +21,15 @@ where XNXQ = '2010-2011-1'
 
 -- update CJ_FXB
 -- set LRZTM='002'
--- where XNXQ = '2013-2014-2'
---   and KCH = '02070111'
---   and KXH = '91';
+-- where XNXQ = '2013-2014-1'
+--   and KCH = '72910052'
+--   and KXH = '200';
 
 -- 成绩分析表
 select XNXQ, KCH, KXH, JSH, LRZTM, CZR, CZSJ
 from CJ_FXB
-where XNXQ = '2013-2014-2'
-  and KCH = '02070111'
-  and KXH = '91';
+where XNXQ = '2013-2014-1'
+  and KCH = '72910052'
+  and KXH = '200';
 
 -- L29101 深研院加课  原jsh1='1991990219'
