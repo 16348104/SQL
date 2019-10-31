@@ -4,27 +4,17 @@
 -- cj_jxs_cjb
 -- pt_xkb    LRZTM   001已提交002暂存
 
--- update cj_yjs_bxqcjb
+-- update pt_xkb
 -- set LRZTM = '002'
--- where XNXQ = '2013-2014-1'
---   and KCH = '90660133'
+-- where XNXQ = '2010-2011-1'
+--   and KCH = '80320062'
 --   and KXH = '0';
 
-select xnxq,
-       kch,
-       xh,
-       kssj,
-       kxh,
-       jsh1,
-       lrztm,
-       djzcj,
-       fdjzcj,
-       lrsj,
-       CZR
-from cj_bks_bxqcjb
-where XNXQ = '2013-2014-1'
-  and KCH = '02070111'
-  and KXH = '91';
+select *
+from pt_xkb
+where XNXQ = '2010-2011-1'
+  and KCH = '80320062'
+  and KXH = '0';
 
 --更新课程成绩全体提交状态
 --CJ_FXB LRZTM  001已提交  002暂存
