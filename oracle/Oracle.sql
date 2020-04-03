@@ -157,11 +157,11 @@ SELECT *
 FROM WLKC_XSZYB
 WHERE ZYID = '8080801f64693ef901646958285f000c';
 
-
 --教师信息
 -- SELECT *
 -- FROM ZHJW_V_JS_JBXXB
 -- WHERE JSH = '2011990058';
+
 --更改教师email
 -- update ZHJW_V_JS_JBXXB t
 -- set t.email='dj10005@tsing.edu.cn'
