@@ -243,3 +243,20 @@ FROM WLKC_QZCYB a
   INNER JOIN WLKC_QZB b
   ON a.WLKCID=b.WLKCID AND a.QZID=b.QZID
 WHERE b.QZID='38288389'AND a.WLKCID='2018-2019-170dd9d2002c54743874c5f6a3b339fea';
+
+
+-- 查询数据库时间
+-- select sysdate from dual;
+
+-- 限制返回查询结果条数
+select *
+from (
+         SELECT *
+         FROM YJ_YJXXB t
+         WHERE WLKCID = '2018-2019-160240202'
+           and LY = 'GG'
+         ORDER BY FSRQ desc)
+
+where ROWNUM <= 200;
+
+
