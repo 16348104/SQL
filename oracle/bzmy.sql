@@ -12,11 +12,11 @@
 -- where ksbh = '2017000040';
 
 -- 重复打印准考证
--- update BZ_MY_KSBMXX
--- set GDH  = '',
---     ZKZH = ''
--- where ksbh = '2017000040'
---   and bknf = '2017';
+update BZ_MY_KSBMXX
+set GDH  = '',
+    ZKZH = ''
+where ksbh = '2017000042'
+  and bknf = '2017';
 
 --查询发放状态值
 select a.ZKZH AS 准考证号, a.FFZTM AS 发放状态
