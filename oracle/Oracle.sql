@@ -67,6 +67,8 @@ WHERE TABLE_NAME = 'USER_INFO';
 SELECT cu.*
 FROM user_cons_columns cu, user_constraints au
 WHERE cu.constraint_name = au.constraint_name AND au.constraint_type = 'P' AND au.table_name = '要查询的表';
+-- 查询数据库时间
+select sysdate from dual;
 
 --
 SELECT *
